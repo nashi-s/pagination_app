@@ -1,2 +1,8 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>投稿一覧</h1>
+<article>
+  <% @posts.each do |post| %>
+    <section>
+    <p><%= post.body %></p>
+    </section>
+  <% end %>
+</article>
