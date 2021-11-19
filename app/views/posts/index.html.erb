@@ -1,4 +1,9 @@
 <h1>投稿一覧</h1>
+ 
+<%= form_with model: @post, local: true do |f| %>
+  <%= f.text_field :body %>
+  <%= f.submit "送信" %>
+<% end %>
 <article>
   <% @posts.each do |post| %>
     <section>
@@ -6,3 +11,5 @@
     </section>
   <% end %>
 </article>
+<%= paginate @posts %>
+
